@@ -6,11 +6,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   openTab = 1;
-  
 
   email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
@@ -24,29 +23,40 @@ export class LoginComponent implements OnInit {
   }
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-      this.email.hasError('email') ? 'Not a valid email' :
-        '';
+    return this.email.hasError('required')
+      ? 'You must enter a value'
+      : this.email.hasError('email')
+      ? 'Not a valid email'
+      : '';
   }
 
   tryLogin() {
-    this.authService.loginWithEmailAndPassword(this.userEmail, this.userPassword);
+    this.authService.loginWithEmailAndPassword(
+      this.userEmail,
+      this.userPassword
+    );
+  }
+
+  trySignup() {
+    this.authService.signUpWithEmailAndPassword(
+      this.userEmail,
+      this.userPassword
+    );
   }
 
   signInWithGoogle() {
     this.authService.loginWithGoogle();
   }
 
-  logout(){
-    this.authService.logout()
+  logout() {
+    this.authService.logout();
   }
 
-  loginWithFacebook(){
-    this.authService.loginWithFacebook()
+  loginWithFacebook() {
+    this.authService.loginWithFacebook();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   toggleTabs($tabNumber: number) {
     this.openTab = $tabNumber;
