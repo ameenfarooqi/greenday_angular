@@ -6,10 +6,7 @@ import {SharedService} from '../shared.service';
 import {environment} from '../../environments/environment';
 
 
-const searchClient = algoliasearch(
-  '9CQGAYW5CN',
-   environment.algolia
-);
+const searchClient = algoliasearch('EC607LKIUM', environment.algolia);
 
 @Component({
   selector: 'app-shop',

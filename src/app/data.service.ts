@@ -3,24 +3,21 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-
-  search = false
-  API_URL = 'https://products-ameen.herokuapp.com'
-
+  search = false;
+  API_URL = 'https://greenday-angular.herokuapp.com/';
   ALGOLIA = environment.algolia;
-  
-  constructor(private http: HttpClient) {   
+
+  constructor(private http: HttpClient) {}
+
+  getProducts() {
+    return this.http.get(this.API_URL + '/products/api');
   }
 
-  getProducts(){
-    return this.http.get(this.API_URL+'/products/api')
-  }
-
-  setSearch(search: boolean){
-    search = search
+  setSearch(search: boolean) {
+    search = search;
   }
 
   getSearch() {
@@ -31,11 +28,11 @@ export class DataService {
 export class SomeSharedService {
   public globalVar = '';
 
-  public get(){
+  public get() {
     return this.globalVar;
   }
 
-  public update(val){
-    this.globalVar = val
+  public update(val) {
+    this.globalVar = val;
   }
 }

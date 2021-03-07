@@ -1,8 +1,8 @@
 # Intern task 
 
-project is live on : https://ameen-intern-task.web.app/
+project is live on : https://greenday-angular-front.web.app
 
-[![Node.js CI](https://github.com/sawood14012/angular-intern-task/actions/workflows/node.js.yml/badge.svg)](https://github.com/sawood14012/angular-intern-task/actions/workflows/node.js.yml)
+[![Node.js CI](https://github.com/ameenfarooqi/greenday_angular/actions/workflows/node.js.yml/badge.svg)](https://github.com/ameenfarooqi/greenday_angular/actions/workflows/node.js.yml)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
