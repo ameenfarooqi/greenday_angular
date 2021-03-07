@@ -23,9 +23,10 @@ export class AuthService {
 
   loginWithEmailAndPassword(email: string, password: string): void {
     if (!this.isLoggedIn) {
-      this.afAuth.signInWithEmailAndPassword(email, password).then(() => {
+      this.afAuth.signInWithEmailAndPassword(email, password).then((userCred) => {
         console.log('Logged In');
         this.router.navigateByUrl('/shop');
+        localStorage.setItem('user', JSON.stringify(userCred.user));
       });
     } else {
       this.router.navigateByUrl('/shop');
