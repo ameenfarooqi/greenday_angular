@@ -8,10 +8,10 @@ const envConfigFile = `export const environment = {
         apiKey: '${process.env.FIREBASE_API_KEY}',
         authDomain: '${process.env.FIREBASE_AUTH_DOMAIN}',
         databaseURL: '${process.env.FIREBASE_DB_URL}',
-        projectId: "go-ready-blockchain",
+        projectId: "angular-greenday",
         storageBucket: '${process.env.FIREBASE_STORAGE_BUCKET}',
-        messagingSenderId: "567732165027",
-        appId: "1:567732165027:web:c1653a86f84b3f047d2216"
+        messagingSenderId: "709946393712",
+        appId: "1:709946393712:web:8f67ff9c06a3846b4da0b5"
     },
     algolia: '${process.env.ALGOLIA_SEARCH_KEY}'
 };
