@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 })
 export class DataService {
   search = false;
-  API_URL = 'https://greenday-angular.herokuapp.com/';
+  API_URL = 'https://greenday-angular.herokuapp.com';
   ALGOLIA = environment.algolia;
 
   constructor(private http: HttpClient) {}
