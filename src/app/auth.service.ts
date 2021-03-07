@@ -81,6 +81,8 @@ export class AuthService {
       this.afAuth.createUserWithEmailAndPassword(email, password).then((userData) => {
         console.log('User Registered');
         resolve(userData);
+        this.router.navigateByUrl('/shop');
+        localStorage.setItem('user', JSON.stringify(userData.user));
       });
     });
 
